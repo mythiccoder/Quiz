@@ -12,15 +12,89 @@
         *{margin: 0px;
         padding: 0px;
         text-decoration: none}
-        #div1{height: 50px;
+        #div1{line-height: 50px;
         width: 100%;
         background-color: #343a40;
         color: aquamarine;
         font-family: "Pacifico";
             text-align: center;
-            padding-top: 10px;
+           
         }
+    #progress {
+    width: 100%;
+    height: 5px;
+    background-color:red;
+    transition: width .1s;
+}  
+        #q1{font-weight:bold;
+        font-size: 20px;}
+        #quesbox{
+            height: 300px;
+            width: 100%;
+            position: relative;
+            background-color: blanchedalmond
+        }
+        
+        #box1{line-height: 40px;
+        width: 200px;
+        background-color: lawngreen;
+        position: absolute;
+        top: 60px;
+            left: 60px;
+        box-shadow: 5px 5px 5px grey}
+        
+        #box2{line-height: 40px;
+        width: 200px;
+        background-color: lawngreen;
+        position: absolute;
+        top: 110px;
+        left: 60px;
+        box-shadow: 5px 5px 5px grey}
+        
+        #submit{height: 30px;
+        width: 150px;
+        background-color: lawngreen;
+        position:fixed;
+        left: 100px;
+        box-shadow: 5px 5px 5px grey;
+        }
+        
     </style>
     <div id="div1">QUIZ CHALLENGE</div>
-</body>
+<div id="progress"></div>
+    <div id="quesbox">
+    <p id="q1">1.Can we make static website using html?</p>
+    <div id="box1">
+    <input type="radio" id="o1" name="q1" value="yes">YES
+    </div>
+    <div id="box2">
+    <input type="radio" id="o2" name="q1" value="no">NO
+    </div>
+    </div>
+        <button id="submit" onclick="check()">SUBMIT ANSWER</button>
+      
+</body> 
+<script>
+       function timer(){ var percent = 100;
+        var speed = 100;
+        var tmr = setInterval(update, speed);
+        function update(){            document.getElementById("progress").style.width = percent--  + "%";
+            if(percent<-1) {
+                clearInterval(tmr);
+                alert("Time's up. You lost!");
+            }
+        }
+                       }
+        function check(){
+            var a = document.getElementById("o1");
+            var b = document.getElementById("o2");
+            if(a.checked==true){
+                alert("CORRECT!");}
+            else if(b.checked==true)
+                {alert("WRONG");}
+            
+        }    
+            
+            
+        </script>
 </html>
