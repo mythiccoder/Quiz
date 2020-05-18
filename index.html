@@ -75,7 +75,7 @@
       
 </body> 
 <script>
-       function timer(){ var percent = 100;
+        var percent = 100;
         var speed = 100;
         var tmr = setInterval(update, speed);
         function update(){            document.getElementById("progress").style.width = percent--  + "%";
@@ -84,7 +84,7 @@
                 alert("Time's up. You lost!");
             }
         }
-                       }
+                       
         function check(){
             var a = document.getElementById("o1");
             var b = document.getElementById("o2");
