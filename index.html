@@ -58,6 +58,14 @@
         left: 100px;
         box-shadow: 5px 5px 5px grey;
         }
+        #myname{ position: fixed;
+            bottom: 0px;
+            width: 100%;
+        background-color: #343a40;
+        color: aquamarine;
+        font-family: "Pacifico";
+            text-align: center;
+           }
         
     </style>
     <div id="div1">QUIZ CHALLENGE</div>
@@ -72,6 +80,7 @@
     </div>
     </div>
         <button id="submit" onclick="check()">SUBMIT ANSWER</button>
+    <p id="myname">made by:-DIVYANSHU MISHRA</p>
       
 </body> 
 <script>
@@ -82,6 +91,7 @@
             if(percent<-1) {
                 clearInterval(tmr);
                 alert("Time's up. You lost!");
+                 document.getElementById("submit").disabled=true;
             }
         }
                        
